@@ -1,3 +1,16 @@
-p {
-    color: red;
+h4 {
+    color: blue;
+}
+
+h2 {
+    color: tomato;
+}
+
+h1 {
+    color: blue;
+}
+
+.highlighted {
+    color: lime;
+    font-size: xx-large;
 }
