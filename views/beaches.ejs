@@ -1,17 +1,28 @@
 <html>
-    <head>
-        <%- include('./partials/header1.ejs') %>
-    </head> 
-    <body>
-        <%- include('./partials/navbar1.ejs') %>
-    
-        <h4 class="highlighted">NZ Beaches</h4>
-        <ul>
-            <li>Phia</li>
-            <li>Mission Bay</li>
-            <li>Long Bay</li>
-        </ul>
-        
+<head >
+    <%- include('partials/header1.ejs') %>
+</head>
+<body >
+    <%- include('partials/navbar1.ejs') %>
+    <div class="container">
+        <h2>Beaches</h2>
+        <img id="orewaImage" class="img2" src="/public/images/orewa.webp" alt="Orewa Beach">
 
-    </body>
+        <script>
+          const img = document.getElementById('orewaImage');
+          img.style.width = '40%';
+          img.style.height = 'auto';
+        </script>
+        
+   
+        <p>Orewa beach is......</p>
+        <p style="color:#23086f">
+            Orewa Beach is a beautiful, family-friendly beach located just north of Auckland, New Zealand.
+            It stretches for about 3 kilometers, offering soft golden sand, 
+            safe swimming, and plenty of space for walking, jogging, or relaxing. 
+            Popular with both locals and tourists, Orewa is also great for paddleboarding, 
+            surfing, and kite flying. The nearby town center has cafes, restaurants and shops,
+             making it a perfect day-trip destination from Auckland.</p>
+    </div>
+</body >
 </html>

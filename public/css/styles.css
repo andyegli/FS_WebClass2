@@ -18,3 +18,7 @@ p {
     color: lime;
     font-size: xx-large;
 }
+.img2 {
+    float: right;
+    max-width: 600px; margin-left: 20px;
+    }
