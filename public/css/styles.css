@@ -1,24 +1,33 @@
 h4 {
-    color: blue;
+    color: purple;
 }
 
 h2 {
-    color: tomato;
+    color: green;
 }
 
 h1 {
-    color: blue;
+    color: red;
 }
 
 p {
-    color: red;
+    color: r#000000;
 }
 
 .highlighted {
     color: lime;
     font-size: xx-large;
 }
+
+
+
 .img2 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
     float: right;
-    max-width: 600px; margin-left: 20px;
-    }
+    margin-left: 15px;
+}
+ 

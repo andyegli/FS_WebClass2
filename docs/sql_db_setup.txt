@@ -1,0 +1,9 @@
+CREATE SCHEMA 'webclass2db';
+
+CREATE TABLE `webclass2db`.`users` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(56) NULL,
+  `password` VARCHAR(256) NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO `webclass2db`.`users` (`id`, `name`, `password`) VALUES ('1001', 'tom', '1234');

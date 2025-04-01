@@ -5,14 +5,22 @@
     <body>
         <%- include('./partials/navbar1.ejs') %>
         
-            <h4 class="highlighted">Auckland</h4>
-            <p>Welcome to Auckland, the largest city in New Zealand, known for its stunning harbors and vibrant culture.</p>
-            <p>Thousends of students have graduated from:
-            <a href="http://futureskills.co.nz" >Future Skills Academy</a>
-            which have campuses in Auckland CBD, Royal Oak and Takapuna .</p>
-            <h4>Wellington</h4>
-        
+        <div class="container">
+            <h2>Auckland</h2>
+            <img id="aklImage" class="img2" src="/public/images/aukland.avif" alt="Auckland">
     
+            <script>
+              const img = document.getElementById('orewaImage');
+              img.style.width = '40%';
+              img.style.height = 'auto';
+            </script>
+            
+       
+            <p>Auckland is......</p>
+            <p style="color:#23086f">
+                Auckland – The Big Little City
 
-    </body>
-</html>
+                Auckland, known as Tāmaki Makaurau in Māori, is New Zealand’s largest city and a vibrant blend of urban energy and natural beauty. Nestled between two harbours and dotted with volcanic cones, it offers stunning views, beautiful beaches, and lush parks. Often called the "Big Little City," Auckland has the buzz of a big metropolis but with a laid-back, friendly vibe. From world-class dining and shopping to sailing adventures and cultural experiences, Auckland truly offers the best of both worlds.</p>
+        </div>
+    </body >
+    </html>

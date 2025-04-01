@@ -1,12 +1,27 @@
-
 <html>
-<head>
-    <%- include('./partials/header1.ejs') %>
-</head> 
-<body>
-    <%- include('./partials/navbar1.ejs') %>
-    
-    <h4>This is the Home Page</h4>
-    
-    </body>
+<head >
+    <%- include('partials/header1.ejs') %>
+</head>
+<body >
+    <%- include('partials/navbar1.ejs') %>
+    <div class="container">
+        <h2>New Zealand</h2>
+        <img id="nz1Image" class="img2" src="/public/images/new-zealand1.jpg" alt="New Zealand">
+
+        <script>
+          const img = document.getElementById('nz1Image');
+          img.style.width = '40%';
+          img.style.height = 'auto';
+        </script>
+        
+   
+        <p>New Zealand is......</p>
+        <p style="color:#23086f">
+
+
+        New Zealand – Clean, Green, Pacific Paradise
+
+        Discover New Zealand – a breathtaking land of lush landscapes, crystal-clear waters, and pure, fresh air. Known as the clean, green jewel of the Pacific, New Zealand is made up of two main islands and countless hidden gems waiting to be explored. From snow-capped mountains and ancient forests to golden beaches and geothermal wonders, it’s a place where nature takes center stage. Whether you're seeking adventure, tranquility, or cultural richness, New Zealand offers an unforgettable escape in one of the world’s most pristine and welcoming destinations.</p>
+    </div>
+</body >
 </html>
