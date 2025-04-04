@@ -39,3 +39,11 @@ p {
     width: 90%;
   }
 }
+
+.error {
+  color: red;
+  background-color: #ffe0e0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

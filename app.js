@@ -13,6 +13,12 @@ app.use((req, res, next) => {
     next();
 });
 
+// Middleware to Make the Message Available in All Views
+app.use((req, res, next) => {
+    res.locals.message = req.session.message;
+    delete req.session.message;
+    next();
+});
 
 // Serve static files from the "public" folder
 app.use(express.static('public'));
@@ -28,32 +34,30 @@ app.get('/login', function (req, res){
     res.render('login.ejs');
 });
 
-app.post('/auth', function (req, res) {
-    let name = req.body.username;
-    let password = req.body.password;
-
-    if (name && password) {
-        conn.query(
-            'SELECT * FROM users WHERE name = ? AND password = ?',
-            [name, password],
-            function (error, results, fields) {
-                if (error) throw error;
-
-                if (results.length > 0) {
-                    req.session.loggedin = true;
-                    req.session.username = name;
-                    res.redirect('/membersOnly');
-                } else {
-                    res.send('Incorrect Username and/or Password!');
-                }
-                res.end();
-            }
-        );
+// show messages on page
+app.post('/auth', function(req, res) {
+    const username = req.body.username;
+    const password = req.body.password;
+  
+    if (username && password) {
+      conn.query('SELECT * FROM users WHERE name = ? AND password = ?', [username, password], function(error, results) {
+        if (error) throw error;
+  
+        if (results.length > 0) {
+          req.session.loggedin = true;
+          req.session.username = username;
+          res.redirect('/membersOnly'); // ✅ Success → go to protected page
+        } else {
+          req.session.message = { type: 'error', text: 'Login failed: Incorrect Username or Password' };
+          res.redirect('/login'); // ❌ Failed → back to login with message
+        }
+      });
     } else {
-        res.send('Please enter Username and Password!');
-        res.end();
+      req.session.message = { type: 'error', text: 'Please enter both Username and Password' };
+      res.redirect('/login');
     }
-});
+  });
+  
 
 // Users can access this if they are logged in
 app.get('/membersonly', function (req, res, next) {
