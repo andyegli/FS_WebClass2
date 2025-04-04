@@ -1,33 +1,41 @@
 h4 {
-    color: purple;
+  color: purple;
 }
 
 h2 {
-    color: green;
+  color: green;
 }
 
 h1 {
-    color: red;
+  color: red;
 }
 
 p {
-    color: r#000000;
+  color: #000000; /* ✅ fixed */
 }
 
 .highlighted {
-    color: lime;
-    font-size: xx-large;
+  color: lime;
+  font-size: xx-large;
 }
 
-
-
-.img2 {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    float: right;
-    margin-left: 15px;
+.img-right {
+  float: right;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
- 
+
+@media (max-width: 768px) {
+  .img-right {
+    float: none;
+    display: block;
+    margin: 1em auto;
+    width: 90%;
+  }
+}
