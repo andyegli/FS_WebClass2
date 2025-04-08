@@ -40,6 +40,14 @@ p {
   }
 }
 
+.success {
+  color: green;
+  background-color: #e0ffe0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
 .error {
   color: red;
   background-color: #ffe0e0;

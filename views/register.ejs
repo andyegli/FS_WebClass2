@@ -19,18 +19,10 @@
       <input type="submit" value="Register">
     </form>
 
-    <!-- ✅ Message section -->
-    <% if (message) { %>
-      <div class="<%= message.type %>">
+    <% if (message && message.type === 'error') { %>
+      <div class="error">
         <%= message.text %>
       </div>
-
-      <% if (message.type && message.type == 'success') { %>
-        <br>
-        <a href="/membersOnly">
-          <button>Continue to Members Area</button>
-        </a>
-      <% } %>
     <% } %>
 
     <br>

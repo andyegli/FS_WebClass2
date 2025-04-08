@@ -24,6 +24,12 @@
         <%= message.text %>
       </div>
     <% } %>
+    <% if (message && message.type === 'success') { %>
+      <div class="success">
+        <%= message.text %>
+      </div>
+    <% } %>
+    
 
     <br>
     <h4>Don’t have an account? <a href="/register">Register here</a></h4>
