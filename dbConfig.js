@@ -1,9 +1,11 @@
+// Load environment variables
+require('dotenv').config();
 var mysql = require('mysql');
 
 var conn = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: '', // Add your password here
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
   database: 'webclass2db'
 });
 
