@@ -55,3 +55,25 @@ p {
   border-radius: 5px;
   margin-top: 10px;
 }
+
+#clock-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#clock {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;        /* smaller font */
+  line-height: 1.4;
+  background-color: #f0f4f8;
+  padding: 8px 14px;          /* smaller padding */
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  text-align: left;
+  white-space: nowrap;
+  color: #23086f;             /* soft readable color */
+  border: 1px solid #ccd4e0;
+}
+
+
